@@ -1,0 +1,207 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    font-family: 'Android';
+    src: url('/assets/fontes/idroid.otf'); /* qndo digita a barra '/' ele já mostra as opções. as vezes usa .. pra voltar pasta */
+}
+
+
+:root {
+    --cor0: #c5ebd6;
+    --cor1: #83E1AD;
+    --cor2: #3DDC84;
+    --cor3: #2FA866;
+    --cor4: #1A5C37;
+    --cor5: #063d1e;
+    --fonte-padrao: Arial, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', cursive;
+    --fonte-android: 'Android', cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color:var(--cor0);
+    font-family: var(--fonte-padrao);
+}
+
+header {
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5) );
+    min-height: 150px; /* altura mínima */
+    text-align: center;
+    padding-top: 40px;
+    
+
+}
+
+
+header > h1 {
+    color: rgb(236, 233, 233);
+    font-family: var(--fonte-destaque);
+    margin-bottom: 20px;
+    font-size: 3em;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.466);
+    
+}
+
+header > p {
+    color: white;
+    font-family: var(--fonte-padrao);
+    font-size: 1.2em;
+    max-width: 500px;
+    /* é preciso centralizar essa parte, pois como usou largura, esse p virou automaticamente
+    um bloco, então precisa colocar uma propriedade para centralizar. Usamos o margin: . */
+    margin: auto;
+    /* padding laterais */
+    padding-left: 10px;
+    padding-right: 10px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.39);
+
+
+}
+
+nav {
+    background-color: var(--cor5);
+    padding: 10px;
+    box-shadow: 0px 8px 9px rgba(0, 0, 0, 0.356);
+}
+
+nav > a {
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    text-decoration: none;
+   
+
+    
+}
+
+nav > a:hover {
+    color: black;
+    background-color: var(--cor2);
+    transition-duration: .4s;
+}
+
+main {
+    background-color: white;
+    padding: 20px;
+    box-shadow:  0px 0px 10px rgba(0, 0, 0, 0.589)/* horizontal vertical espalhamento cor*/;
+    margin: auto; /* centralizado */
+    margin-bottom: 20px;
+    border-bottom-left-radius: 10px; /* border-radius para cantos */
+    border-bottom-right-radius: 10px;
+
+    /* Responsividade básica */
+    min-width: 400px;
+    max-width: 1040px;
+    /* --- */
+
+    
+}
+
+main h1 {
+    color: var(--cor5);
+    font-family: var(--fonte-android);
+}
+
+main h2 {
+    font-family: var(--fonte-android);
+    font-size: 1.4em;
+    background-image: linear-gradient(to right, var(--cor1), transparent );
+    padding: 5px;
+    text-indent: 5px;
+    border-radius: 6px 21px;
+
+}
+
+main p {
+    margin: 15px 0px;
+    text-indent: 30px;
+    line-height: 2em;
+}
+
+img {
+    width: 100%;
+}   
+
+.bugdroid {
+    /* largura maxima indica q ele mantem essa largura sempre, independente do tamanho da tela, ele não vai passar desse valor, ou seja, em telas pequenas, a imagens não vai ficar mto pequena. */
+    max-width: 320px;
+    display: block;
+    margin: auto;
+    
+    
+}
+
+main a {
+    text-decoration: none;
+    color: var(--cor5);
+    font-weight: bold;
+    background-color: var(--cor1);
+    padding: 3px 3px;
+    border-radius:2.2px 2.2px;
+}
+
+main a:hover {
+    color: green;
+    background-color: #6cbb907e;
+    
+}
+
+.destaque {
+    font-weight: bold;
+    
+}
+
+aside {
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+aside > ul {
+    list-style-position: inside;
+    list-style-type: none;
+    columns: 2;
+}
+
+aside > ul> li::before{
+    content: " 🗸 ";
+    font-weight: bold;
+    color: black;
+}
+
+footer {
+    background-color: var(--cor5);
+    color: white;
+    min-height: 50px;
+    max-height: 70px;
+    
+
+}
+
+footer p {
+    text-align: center;
+    padding-top: 15px;
+    font-size: .8em;
+    
+
+}
+
+footer a {
+    text-decoration: none;
+}
+
+.footer-anchor {
+    color: white;
+    font-weight: bold;
+}
+
+.footer-anchor:hover {
+    color: var(--cor3);
+}
